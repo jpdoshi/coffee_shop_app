@@ -1,16 +1,4 @@
-# first_app
+# JD Coffee Shop
+Coffee Shop App UI made with flutter.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_3-7-2024_163057_localhost](https://github.com/jpdoshi/coffee_shop_app/assets/122164427/2544b883-9a63-42da-8be6-8984255faa01)
