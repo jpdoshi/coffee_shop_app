@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:first_app/models/category_model.dart';
 import 'package:first_app/models/popular_model.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +61,7 @@ class HomePage extends StatelessWidget {
 
   Column popularSection() {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
           padding: EdgeInsets.only(left: 20),
@@ -76,6 +78,7 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10),
           shrinkWrap: true,
           crossAxisCount: 2,
+          childAspectRatio: 1 / 1.25,
           children: List.generate(popularItems.length, (index) {
             return Padding(
               padding: const EdgeInsets.all(10),
@@ -90,35 +93,30 @@ class HomePage extends StatelessWidget {
                           offset: const Offset(0, 2))
                     ]),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(50),
-                      child: Image.asset(
-                        popularItems[index].imagePath,
-                        fit: BoxFit.fill,
-                        height: 100,
+                    Padding(
+                      padding: const EdgeInsets.all(6),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.asset(
+                          popularItems[index].imagePath,
+                          fit: BoxFit.fill,
+                        ),
                       ),
                     ),
-                    Column(
-                      children: [
-                        Text(
-                          popularItems[index].title,
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15,
-                              fontFamily: 'Poppins',
-                              color: Color(0xff4e342e)),
-                        ),
-                        Text(
-                          popularItems[index].category,
-                          style: const TextStyle(
-                              fontSize: 13,
-                              color: Color(0xffa1887f),
-                              height: 1.2),
-                        ),
-                      ],
-                    )
+                    Text(
+                      popularItems[index].title,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          fontFamily: 'Poppins',
+                          color: Color(0xff4e342e)),
+                    ),
+                    Text(
+                      popularItems[index].category,
+                      style: const TextStyle(
+                          fontSize: 13, color: Color(0xffa1887f), height: 1.2),
+                    ),
                   ],
                 ),
               ),
@@ -151,11 +149,14 @@ class HomePage extends StatelessWidget {
               return Container(
                 width: 200,
                 decoration: BoxDecoration(
-                    gradient: const LinearGradient(
+                    gradient: LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
-                        colors: [Color(0xff3e2723), Color(0xff4e342e)]),
-                    borderRadius: BorderRadius.circular(8)),
+                        colors: [
+                          const Color(0xffefebe9).withOpacity(0.5),
+                          const Color(0xffd7ccc8).withOpacity(0.5)
+                        ]),
+                    borderRadius: BorderRadius.circular(10)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -164,7 +165,7 @@ class HomePage extends StatelessWidget {
                       width: 35,
                       child: SvgPicture.asset(
                         categories[index].iconPath,
-                        color: const Color(0xffbcaaa4),
+                        color: const Color(0xff8d6e63),
                       ),
                     ),
                     const SizedBox(width: 8),
@@ -174,7 +175,7 @@ class HomePage extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Poppins',
                           fontSize: 20,
-                          color: Colors.white),
+                          color: Color(0xff8d6e63)),
                     )
                   ],
                 ),
@@ -235,7 +236,9 @@ class HomePage extends StatelessWidget {
       ),
       actions: [
         GestureDetector(
-            onTap: () {},
+            onTap: () {
+              debugPrint('Menu Button');
+            },
             child: Container(
               alignment: Alignment.center,
               padding: const EdgeInsets.only(right: 20),
