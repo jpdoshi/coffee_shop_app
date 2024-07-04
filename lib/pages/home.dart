@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:first_app/models/category_model.dart';
 import 'package:first_app/models/popular_model.dart';
 import 'package:flutter/material.dart';
@@ -76,6 +74,7 @@ class HomePage extends StatelessWidget {
         const SizedBox(height: 15),
         GridView.count(
           padding: const EdgeInsets.symmetric(horizontal: 10),
+          primary: false,
           shrinkWrap: true,
           crossAxisCount: 2,
           childAspectRatio: 1 / 1.25,
@@ -231,7 +230,7 @@ class HomePage extends StatelessWidget {
       leading: const Padding(
         padding: EdgeInsets.only(left: 20),
         child: Image(
-          image: AssetImage('images/logo.png'),
+          image: AssetImage('assets/images/logo.png'),
         ),
       ),
       actions: [
