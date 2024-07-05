@@ -1,5 +1,5 @@
-import 'package:first_app/models/category_model.dart';
-import 'package:first_app/models/popular_model.dart';
+import 'package:coffee_shop_app/models/category_model.dart';
+import 'package:coffee_shop_app/models/popular_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
