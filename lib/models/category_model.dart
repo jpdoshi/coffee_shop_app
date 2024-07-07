@@ -19,8 +19,8 @@ class CategoryModel {
     categories
         .add(CategoryModel(title: 'Tea', iconPath: 'assets/icons/coffee.svg'));
 
-    categories.add(CategoryModel(
-        title: 'Fruit Juices', iconPath: 'assets/icons/juices.svg'));
+    categories.add(
+        CategoryModel(title: 'Juices', iconPath: 'assets/icons/juices.svg'));
 
     return categories;
   }

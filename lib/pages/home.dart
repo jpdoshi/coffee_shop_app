@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(6),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(18),
+                        borderRadius: BorderRadius.circular(16),
                         child: Image.asset(
                           popularItems[index].imagePath,
                           fit: BoxFit.fill,
@@ -138,7 +138,7 @@ class HomePage extends StatelessWidget {
       ),
       const SizedBox(height: 15),
       SizedBox(
-        height: 100,
+        height: 65,
         child: ListView.separated(
             padding: const EdgeInsets.only(left: 20, right: 20),
             itemCount: categories.length,
@@ -146,7 +146,7 @@ class HomePage extends StatelessWidget {
             separatorBuilder: (context, index) => const SizedBox(width: 15),
             itemBuilder: (context, index) {
               return Container(
-                width: 200,
+                width: 150,
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                         begin: Alignment.topLeft,
@@ -160,8 +160,8 @@ class HomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(
-                      height: 35,
-                      width: 35,
+                      height: 30,
+                      width: 30,
                       child: SvgPicture.asset(
                         categories[index].iconPath,
                         color: const Color(0xff8d6e63),
@@ -173,7 +173,7 @@ class HomePage extends StatelessWidget {
                       style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Poppins',
-                          fontSize: 20,
+                          fontSize: 18,
                           color: Color(0xff8d6e63)),
                     )
                   ],
@@ -193,14 +193,14 @@ class HomePage extends StatelessWidget {
               hintText: 'Find Coffee, Snacks and Deserts',
               hintStyle: const TextStyle(color: Color(0xffbcaaa4)),
               prefixIcon: Padding(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(12),
                   child: SvgPicture.asset(
                     'assets/icons/search.svg',
                     height: 10,
                     width: 10,
                   )),
               suffixIcon: Padding(
-                  padding: const EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(10),
                   child: SvgPicture.asset(
                     'assets/icons/filter.svg',
                     height: 10,
